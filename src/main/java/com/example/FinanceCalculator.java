@@ -67,7 +67,7 @@ public class FinanceCalculator {
      * @return
      */
     public double total(){
-        double result = getMoneyValue() * getPercentage();
+        double result = moneyValue * percentage;
         setAmount(result);
         return result;
     }
@@ -78,7 +78,7 @@ public class FinanceCalculator {
      * @return amount left over after deduction
      */
     public double leftOverAmount() {
-        double amountLeft = getMoneyValue() - getAmount();
+        double amountLeft = moneyValue - amount;
         setRemainingAmount(amountLeft);
         return amountLeft;
     }
@@ -117,7 +117,7 @@ public class FinanceCalculator {
     
     @Override
     public String toString() {
-        return String.format("Take out $%.2f dollars. Your remaining amount is $%.2f dollars %n", getAmount(),
-                getRemainingAmount());
+        return String.format("Take out $%.2f dollars. Your remaining amount is $%.2f dollars %n", amount,
+                remainingAmount);
     }
 }

@@ -12,7 +12,6 @@ public class FinanceCalculatorTest {
         double testInput = 500;
         double testPercent = 40 / 100;
         double testValue = testInput * testPercent;
-        double testResult = testValue;
-        assertEquals(testResult, calculator.total());
+        assertEquals(testValue, calculator.total());
         }
     } 
